@@ -77,19 +77,19 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ( [segue.identifier isEqualToString: @"mm_center"] )
+    if ( [segue.identifier hasPrefix: @"mm_center"] )
     {
         NSParameterAssert( [segue isKindOfClass: [MMDrawerControllerSegue class]]);
         [self setCenterViewController: segue.destinationViewController];
     }
     else
-    if ( [segue.identifier isEqualToString: @"mm_left"] )
+    if ( [segue.identifier hasPrefix: @"mm_left"] )
     {
         NSParameterAssert( [segue isKindOfClass: [MMDrawerControllerSegue class]]);
         [self setLeftDrawerViewController: segue.destinationViewController];
     }
     else 
-    if ( [segue.identifier isEqualToString: @"mm_right"] )
+    if ( [segue.identifier hasPrefix: @"mm_right"] )
     {
         NSParameterAssert( [segue isKindOfClass: [MMDrawerControllerSegue class]]);
         [self setRightDrawerViewController: segue.destinationViewController];
